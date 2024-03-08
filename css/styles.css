@@ -24,6 +24,81 @@ body {
     color: var(--navy-blue);
 }
 
+/* Обнулення дефолтних маржинів для заголовків та параграфів тексту */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Обнулення дефолтних маржинів та лівого падіння для списків */
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Зроблення зображень блочними елементами */
+img {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Визначення ширини та падінгів для контейнера */
+.container {
+    max-width: 1128px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--cornflower);
+    
+}
+.main-nav {
+    display: flex;
+   
+    flex-grow: 1;
+    padding: 24px; 
+   
+}
+
+.nav-links  {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 76px;
+}
+.contact-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
+}
+
 .logo-link {
     font-family: var(--second-family);
     font-weight: 800;
@@ -33,20 +108,17 @@ body {
     text-transform: uppercase;
     color: var(--iris);
     text-decoration: none;
+    display: flex;
+    align-items: right;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 0px
 }
 
 .logo-link .studio {
-    font-weight: 800;
     color: var(--navy-blue);
 }
 
-ul {
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
 
 .nav-link {
     font-family: var(--font-family);
@@ -56,6 +128,7 @@ a{
     letter-spacing: 0.02em;
     color: var(--navy-blue);
 }
+
 
 
 .contact-number,
@@ -68,6 +141,7 @@ a{
     letter-spacing: 0.02em;
 }
 
+
 .nav-links a:hover,
 .nav-links a:focus,
 .contact-info a:hover,
@@ -78,13 +152,35 @@ a{
 
 
 
+
+.services-section {
+    width: 1440px;
+    height: 600px;
+    background-color: var(--navy-blue);
+    display: flex;
+
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
 .services-title {
     font-size: 56px;
     line-height: 1.07143;
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--white);
-    background: #2e2f42;
+    background:var(--navy-blue);
+    margin-bottom: 48px;
+    margin-top: 188px;
+    margin-left: 276px;
+    margin-right: 276px;
+    
+    
 }
 
 .order-button {
@@ -97,8 +193,10 @@ a{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: var(--iris);
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 4px;
+    width: 169px;
+    height: 56px;
 }
 
 .order-button:hover {
@@ -127,6 +225,30 @@ a{
     color: var(--white);
 }
 
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto; /* Ajusta el margen izquierdo según tus necesidades */
+    margin-right: auto; /* Ajusta el margen derecho según tus necesidades */
+    margin-top: 120px;
+    width: 1128px;
+    height: 104px;
+   
+}
+
+.feature-item:last-child {
+    margin-right: 0;
+}
+
+.feature-item {
+    
+    flex: 1; /* Para que los elementos ocupen el mismo espacio */
+    margin-right: 24px; /* Agrega espacio entre los elementos */
+}
+
+.feature-name {
+    margin-bottom: 8px;
+}
 .project-title,
 .feature-name {
     font-weight: 500;
@@ -144,8 +266,26 @@ a{
     color: var(--slate);
 }
 
+.services-images-container {
+    width: 1128px;
+    height: 412px;
+    margin-top: 120px;
+}
+
+.services-images-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    
+}
+
+.services-images-title {
+    gap: 24px;
+}
+
+
 .services-images-title,
-.features-title,
+.visually-hidden,
 .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -154,6 +294,49 @@ a{
     text-transform: capitalize;
     text-align: center;
     color: var(--navy-blue);
+    
+}
+
+.service-image-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0px;
+    border: 1px solid var(--cornflower);
+}
+
+.team-section {
+    width: 1440px;
+    height: 732px;
+    background-color: var(--cloud);
+    margin-top: 120px;
+}
+.team-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-title { 
+    margin-top: 120px;
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.team-member {
+    border-radius: 0 0 4px 4px;
+    padding: 0px 0px 32px 0px;
+    width: 264px;
+    height: 380px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: var(--white);
+}
+.team-memeber-image {
+    gap: 24px;
 }
 
 .team-member-name {
@@ -163,6 +346,7 @@ a{
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--navy-blue);
+    margin-top: 32px;
 }
 
 .team-member-role {
@@ -171,17 +355,32 @@ a{
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--slate);
+    margin-top: 8px;
+
 }
 
 /* Footer Styles */
 .footer {
+    width: 1440px;
+    height: 312px;
     background: var(--navy-blue);
+}
+
+.footer-container {
+    width: 294px;
+    height: 132px;
+    margin-left: 156px;
 }
 
 .footer-text,
 .studio-footer {
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
+}
+
+.footer-text {
+    margin-top: 16px;
 }
