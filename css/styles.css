@@ -27,6 +27,7 @@ body {
 /* Обнулення дефолтних маржинів для заголовків та параграфів тексту */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0;
 }
 
 /* Обнулення дефолтних маржинів та лівого падіння для списків */
@@ -50,10 +51,7 @@ a {
 /* Визначення ширини та падінгів для контейнера */
 .container {
     max-width: 1128px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .visually-hidden {
@@ -72,14 +70,16 @@ a {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 24px 0px 24px 0px;
+}
+
+.header {
     border-bottom: 1px solid var(--cornflower);
-    
 }
 .main-nav {
     display: flex;
-   
-    flex-grow: 1;
-    padding: 24px; 
+    flex-grow: 1;  
    
 }
 
@@ -203,6 +203,20 @@ a {
     background: var(--ocean);
 }
 
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+.filter-buttons {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 96px;
+    margin-left: 271px;
+    gap: 24px;
+}
+
+
+
 .filter-button {
     background: var(--cornflower);
     font-family: var(--font-family);
@@ -214,15 +228,43 @@ a {
     color: var(--iris);
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
     border-radius: 4px;
+    padding: 12px 24px;
 }
 
+.filter-button {
+    margin-right: 24px;	
+}
 .filter-button:hover,
 .filter-button:focus {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
     background: var(--ocean);
     color: var(--white);
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 72px;
+    margin-bottom: 120px;
+}
+
+.project-item {
+    flex-basis: calc((100% - 48px) / 3);
+    border: 1px solid #e7e9fc;
+    width: 360px;
+    height: 420px;
+}
+
+.project-title {
+    margin-top: 32px;
+    padding-left: 16px;
+}
+
+.project-category {
+    margin-top: 8px; 
+    padding-left: 16px;   
 }
 
 .features-list {
@@ -368,13 +410,13 @@ a {
 }
 
 .footer-container {
-    width: 294px;
+    width: 264px;
     height: 132px;
     margin-left: 156px;
 }
 
-.logo-link.studio-footer {
-    margin-top: 120px;   
+.footer-logo {
+    margin-top: 100px;
 }
 
 .footer-text,
