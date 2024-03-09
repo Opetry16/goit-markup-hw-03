@@ -253,7 +253,7 @@ a {
 .project-item {
     flex-basis: calc((100% - 48px) / 3);
     border: 1px solid #e7e9fc;
-    width: 360px;
+    width: calc((100% - 48px) / 3); 
     height: 420px;
 }
 
@@ -273,7 +273,7 @@ a {
     margin-left: auto; /* Ajusta el margen izquierdo según tus necesidades */
     margin-right: auto; /* Ajusta el margen derecho según tus necesidades */
     margin-top: 120px;
-    width: 1128px;
+    width: calc(100% - 72px)/4;
     height: 104px;
    
 }
